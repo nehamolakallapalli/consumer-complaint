@@ -43,7 +43,7 @@ public class ConsumerRestController
 		}
 		
 		@GetMapping("/get/{id}")
-		@ResponseStatus(HttpStatus.FOUND)
+		@ResponseStatus(HttpStatus.OK)
 		public ConsumerDto findConsumerById(@PathVariable("id")int id) {
 			Consumer consumer = service.findConsumerById(id);
 			ConsumerDto response = toDto(consumer);
